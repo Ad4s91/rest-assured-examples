@@ -123,12 +123,6 @@
         </dependency>
         <dependency>
             <groupId>org.assertj</groupId>
-            <artifactId>assertj-core</artifactId>
-            <version>${assertj-core.version}</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.assertj</groupId>
             <artifactId>assertj-joda-time</artifactId>
             <version>2.2.0</version>
             <scope>test</scope>
@@ -172,24 +166,9 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>com.google.guava</groupId>
-            <artifactId>guava</artifactId>
-            <version>29.0-jre</version>
-        </dependency>
-        <dependency>
-            <groupId>joda-time</groupId>
-            <artifactId>joda-time</artifactId>
-            <version>2.9.9</version>
-        </dependency>
-        <dependency>
             <groupId>org.neo4j</groupId>
             <artifactId>neo4j</artifactId>
             <version>${neo4j.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>ch.qos.logback</groupId>
-            <artifactId>logback-classic</artifactId>
-            <version>1.2.2</version>
         </dependency>
         <dependency>
             <groupId>net.javacrumbs.json-unit</groupId>
@@ -197,14 +176,6 @@
             <version>2.22.0</version>
             <scope>test</scope>
         </dependency>
-        <dependency>
-            <groupId>org.json</groupId>
-            <artifactId>json</artifactId>
-            <version>20201115</version>
-            <scope>test</scope>
-        </dependency>
-
-
 
         <!-- needed for generated assertions -->
         <dependency>
@@ -252,8 +223,8 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.8.1</version>
                 <configuration>
-                    <source>9</source>
-                    <target>9</target>
+                    <source>11</source>
+                    <target>11</target>
                     <encoding>${project.build.sourceEncoding}</encoding>
                 </configuration>
             </plugin>
@@ -353,7 +324,7 @@
                 <version>1.9.0</version>
                 <configuration>
                     <!-- Template location -->
-                    <header>licence-header.txt</header>
+<!--                    <header>licence-header.txt</header>-->
                     <properties>
                         <!-- Values to be substituted in template -->
                         <inceptionYear>2012</inceptionYear>
