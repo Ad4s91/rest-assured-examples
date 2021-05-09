@@ -24,7 +24,6 @@ public class MethodSetupTest {
         assertEquals(Optional.empty(), pie.getTopping());
     }
 
-    @Test
     @ParameterizedTest
     @ValueSource(strings = {"sprinkles", "powder", "chocolate"})
     public void shouldBeToppedWithSomething(String topping){
