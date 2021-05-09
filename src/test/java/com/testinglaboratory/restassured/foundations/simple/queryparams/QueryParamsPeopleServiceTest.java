@@ -75,13 +75,15 @@ public class QueryParamsPeopleServiceTest {
                 .queryParam("last_name", lastName)
                 .queryParam("middle_name", middleName)
                 .when()
+                .log().method().log().parameters()
                 .get("/query_params")
                 .then()
                 .assertThat()
                 .statusCode(HttpStatus.SC_OK)
                 .body("Greeting", equalTo(
                         String.format("Hello, %s %s %s!", firstName, middleName, lastName)))
-                .log().everything();
+                .log().everything()
+                .log().ifValidationFails();
     }
 
     @Test
@@ -93,6 +95,6 @@ public class QueryParamsPeopleServiceTest {
         log.info(String.valueOf(people));
         assertThat(people)
                 .as("People of this beautiful country")
-                .hasSizeGreaterThanOrEqualTo(1000);
+                .hasSizeGreaterThanOrEqualTo(1001);
     }
 }

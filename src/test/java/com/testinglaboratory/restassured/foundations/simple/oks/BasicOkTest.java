@@ -54,7 +54,8 @@ public class BasicOkTest {
                                 "responseInformation.shortDescription", equalTo("OK"),
                                 "responseInformation.longDescription", equalTo("The request has succeeded")
                         )
-                        .time(lessThan(1000L)).extract().response();
+                        .time(lessThan(1400L)).extract().response();
+
         LocalDateTime dateTime = LocalDateTime.parse(
                 response.body().jsonPath().getString("timestamp")
                         .replace(" ", "T")
