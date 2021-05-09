@@ -10,7 +10,7 @@ public abstract class AbstractInetAddressesAssert<S extends AbstractInetAddresse
 
   /**
    * Creates a new <code>{@link AbstractInetAddressesAssert}</code> to make assertions on actual InetAddresses.
-   * @param actual the InetAddresses we want to make assertions on. 
+   * @param actual the InetAddresses we want to make assertions on.
    */
   protected AbstractInetAddressesAssert(A actual, Class<S> selfType) {
     super(actual, selfType);
