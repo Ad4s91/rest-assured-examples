@@ -57,7 +57,7 @@ public class ExerciseQueryParamsPeopleServiceTest {
                 .getString("first_name");
 
         log.info(String.valueOf(people));
-        assertThat(people).isEqualTo("[Julita]");
+        assertThat(people).isEqualTo("[Leonard]");
     }
 
     @Test
@@ -73,7 +73,7 @@ public class ExerciseQueryParamsPeopleServiceTest {
         List<Map<String, String>> people = response.body().jsonPath().getList(".");
 
         log.info(String.valueOf(people));
-        assertThat(people).hasSize(9);
+        assertThat(people).hasSize(7);
 
         people.forEach(stringStringMap ->
                 assertThat(
